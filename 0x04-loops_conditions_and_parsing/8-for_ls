@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# print content of current directory
+
+if [[ -e temp.txt ]]
+then
+	rm temp.txt
+fi
+ls > temp.txt
+for ele in $(<temp.txt)
+do
+	ele="$ele"
+done
+output=$(cut -d'-' -f2 temp.txt)
+echo "$output"
