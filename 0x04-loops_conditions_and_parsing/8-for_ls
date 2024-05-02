@@ -4,7 +4,7 @@
 files=$(ls)
 for file in $files
 do
-	if [[ $file != .* && $file == *-* ]]
+	if [[ $file != .* ]]
 	then
 		output=$(echo "$file" | cut -d'-' -f2-)
 		echo "$output"
