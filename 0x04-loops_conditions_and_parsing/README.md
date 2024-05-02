@@ -755,3 +755,65 @@ Examples:
    ```
 
    This example uses wildcard patterns to match different file extensions and prints the corresponding message.
+
+## How to Create SSH Keys
+
+SSH keys provide a secure and convenient way to authenticate and connect to remote servers. This guide will walk you through the process of creating SSH keys on a Unix-like system.
+
+1. Open a terminal: Launch a terminal application on your Unix-like system. This could be the default terminal emulator or a third-party application.
+
+2. Generate the SSH key pair: In the terminal, use the `ssh-keygen` command to generate the SSH key pair. By default, this command generates an RSA key pair, but you can also specify a different type of key if desired. For example, to generate an RSA key pair, enter the following command:
+
+   ```bash
+   ssh-keygen -t rsa
+   ```
+
+   You can also specify the desired key size using the `-b` option. The default key size is 2048 bits. For example, to generate an RSA key pair with a key size of 4096 bits, you can use the following command:
+
+   ```bash
+   ssh-keygen -t rsa -b 4096
+   ```
+
+   The `ssh-keygen` command will prompt you for a file name to save the key pair to and an optional passphrase. Press Enter to accept the default file name and location, or specify a different file name and path if needed. You can also choose to set a passphrase for additional security, but it's optional.
+
+   For example, the following prompt will appear:
+
+   ```
+   Enter file in which to save the key (/home/yourusername/.ssh/id_rsa):
+   ```
+
+   Press Enter to accept the default file name and location.
+
+   If you choose to set a passphrase, you will be prompted to enter it twice.
+
+3. View the generated keys: After generating the SSH key pair, you can view the files in the specified file location. By default, the private key is saved as `id_rsa` and the public key as `id_rsa.pub` in the `.ssh` directory of your home folder (`~/.ssh/`).
+
+   To view the files, you can use the `ls` command:
+
+   ```bash
+   ls ~/.ssh/
+   ```
+
+   This will list the contents of the `.ssh` directory and display the generated key files.
+
+4. Use the SSH keys: The private key (`id_rsa`) should be kept secure and not shared with anyone. The corresponding public key (`id_rsa.pub`) can be copied to the remote servers you want to connect to.
+
+   To copy the public key to a remote server, you can use the `ssh-copy-id` command followed by the username and the hostname or IP address of the remote server. For example:
+
+   ```bash
+   ssh-copy-id username@remote-host
+   ```
+
+   This command will prompt you for the password of the remote user account. After entering the password, the public key will be securely copied to the remote server and added to the authorized keys file.
+
+   Once the public key is added to the remote server, you can connect to it without being prompted for a password when using the corresponding private key.
+
+   To connect to a remote server using SSH, you can use the `ssh` command followed by the username and the hostname or IP address of the remote server. For example:
+
+   ```bash
+   ssh username@remote-host
+   ```
+
+   If you set a passphrase for the private key, you will be prompted to enter it before establishing the SSH connection.
+
+That's it! You have successfully created SSH keys and can now use them for secure and passwordless authentication when connecting to remote servers. Remember to keep your private key secure and avoid sharing it with unauthorized individuals.
