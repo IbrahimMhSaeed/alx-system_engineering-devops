@@ -496,3 +496,183 @@ y=20
 z=x+y
 print z
 ```
+
+## env
+In Unix, the `env` command is used to display or modify the environment variables for a given command or script. The environment variables are dynamic values that affect the behavior of programs and processes on the Unix system.
+
+Here is a summary of how the `env` command works in Unix:
+
+- The `env` command allows you to run a command or script with a modified environment by specifying environment variables before the command.
+- When you execute the `env` command followed by a command or script, it creates a new environment and executes the specified command within that environment.
+- By using the `-i` option with `env`, you can start with an empty environment, meaning no environment variables are inherited from the current shell.
+- Environment variables are typically set using the syntax `variable=value`. For example, `env VAR=value command` sets the environment variable `VAR` to the value `value` and then executes the `command`.
+- If you want to display the current environment variables, you can simply run `env` without any arguments. It will list all the variables and their values.
+- The `env` command can be useful when you want to override specific environment variables temporarily for a particular command or script. It allows you to provide a different value for an environment variable without permanently modifying the system-wide settings.
+
+Here is an example usage of the `env` command:
+
+```
+env VAR=value command
+```
+
+In this example, `VAR` is an environment variable that is set to the value `value`, and then the `command` is executed within that modified environment.
+
+Note: The specific behavior and options of the `env` command may vary slightly depending on the Unix variant or shell being used.
+
+## `cut` Command
+
+The `cut` command in Unix is used to extract specific sections (columns) from lines of input based on a delimiter. It allows you to select and manipulate specific fields from files or input streams. Here's a summary of how it works:
+
+```bash
+cut OPTION... [FILE]...
+```
+
+Examples:
+
+1. Extract the second field from a file delimited by a space:
+   ```bash
+   cut -d' ' -f2 file.txt
+   ```
+
+   This command extracts the second field from each line of `file.txt` using a space as the delimiter.
+
+2. Extract characters 3-7 from each line of a file:
+   ```bash
+   cut -c3-7 file.txt
+   ```
+
+   This command extracts characters 3 to 7 from each line of `file.txt`.
+
+3. Extract fields 1 and 3 from a file delimited by a comma:
+   ```bash
+   cut -d',' -f1,3 file.csv
+   ```
+
+   This command extracts the first and third fields from each line of `file.csv` using a comma as the delimiter.
+
+## `for` Loop
+
+The `for` loop is a control structure in Unix that allows you to iterate over a list of items and perform a set of commands for each item. It has the following syntax:
+
+```bash
+for VAR in LIST
+do
+  # Commands to be executed
+done
+```
+
+Examples:
+
+1. Iterate over a list of filenames and print each filename:
+   ```bash
+   for file in file1.txt file2.txt file3.txt
+   do
+     echo $file
+   done
+   ```
+
+   This loop iterates over the filenames `file1.txt`, `file2.txt`, and `file3.txt` and prints each filename.
+
+2. Iterate over a range of numbers and print each number:
+   ```bash
+   for num in {1..5}
+   do
+     echo $num
+   done
+   ```
+
+   This loop iterates over the range of numbers from 1 to 5 and prints each number.
+
+## `while` Loop
+
+The `while` loop is a control structure in Unix that repeatedly executes a set of commands as long as a specified condition is true. It has the following syntax:
+
+```bash
+while CONDITION
+do
+  # Commands to be executed
+done
+```
+
+Examples:
+
+1. Print numbers from 1 to 5 using a `while` loop:
+   ```bash
+   num=1
+   while [ $num -le 5 ]
+   do
+     echo $num
+     num=$((num + 1))
+   done
+   ```
+
+   This loop prints numbers from 1 to 5 by incrementing the `num` variable in each iteration.
+
+2. Read lines from a file and process each line using a `while` loop:
+   ```bash
+   while IFS= read -r line
+   do
+     echo "Processing: $line"
+   done < file.txt
+   ```
+
+   This loop reads lines from `file.txt` and processes each line by echoing a message with the line content.
+
+## `until` Loop
+
+The `until` loop is a control structure in Unix that repeatedly executes a set of commands until a specified condition becomes true. It has the following syntax:
+
+```bash
+until CONDITION
+do
+  # Commands to be executed
+done
+```
+
+Examples:
+
+1. Print numbers from 1 to 5 using an `until` loop:
+   ```bash
+   num=1
+   until [ $num -gt 5 ]
+   do
+     echo $num
+     num=$((num + 1))
+   done
+   ```
+
+   This loop prints numbers from 1 to 5 by incrementing the `num` variable in each iteration until `num` becomes greater than 5.
+
+2. Read lines from a file and process each line using an `until` loop:
+   ```bash
+   until [ -z "$line" ]
+   do
+     read -r line
+     echo "Processing: $line"
+   done < file.txt
+   ```
+
+   This loop reads lines from `file.txt` and processes each line by echoing a message with the line content until an empty line is encountered (`-z "$line"` condition).
+
+## `if` Statement
+
+The `if` statement is a conditional control structure in Unix that allows you to perform different actions based on certain conditions. It has the following syntax:
+
+```bash
+if CONDITION
+then
+  # Commands to be executed if the condition is true
+else
+  # Commands to be executed if the condition is false (optional)
+fi
+```
+
+Examples:
+
+1. Check if a number is greater than 10 using an `if` statement:
+   ```bash
+   num=15
+   if [ $num -gt 10 ]
+   then
+     echo "Number is greater than 10"
+   fi
