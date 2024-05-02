@@ -250,4 +250,70 @@ The process is in a sleeping state when it is waiting for a resource to be avail
 A process enters a stopped state when it receives a stop signal.
 
 - Zombie
-Zombie state is when a process is dead but the entry for the process is still present in the table.
+state is when a process is dead but the entry for the process is still present in the table.
+
+## More Commands
+
+### ps
+
+The `ps` command is used to display information about currently running processes. It provides a snapshot of the processes running on the system at the time the command is executed. It can show various details such as process IDs (PIDs), CPU and memory usage, process hierarchy, and more.
+
+Example: Display the PIDs and process names of all processes owned by the current user.
+```
+$ ps -u $USER -o pid,cmd
+```
+
+### pgrep
+
+The `pgrep` command is used to search for processes based on their names or other attributes and retrieve their PIDs. It allows you to find processes by specifying a pattern or criteria, making it useful for automating process-related tasks or obtaining information about specific processes.
+
+Example: Find the PID of a process named "apache2".
+```
+$ pgrep apache2
+```
+
+### pkill
+
+The `pkill` command is used to send signals to processes based on their names or other attributes. It allows you to terminate or manipulate multiple processes at once by specifying a pattern or criteria. By default, `pkill` sends the SIGTERM signal, but you can specify a different signal if needed.
+
+Example: Terminate all processes with the name "python3".
+```
+$ pkill python3
+```
+
+### kill
+
+The `kill` command is used to send signals to processes. It can be used to terminate or manipulate individual processes by specifying their PIDs. By default, `kill` sends the SIGTERM signal, but you can specify a different signal if needed.
+
+Example: Send the SIGKILL signal to terminate a process with PID 1234.
+```
+$ kill -9 1234
+```
+
+### exit
+
+The `exit` command is used to exit the current shell or terminate a script. It is commonly used to gracefully end a shell session or to indicate the end of a script execution.
+
+Example: Exit the current shell session.
+```
+$ exit
+```
+
+### trap
+
+The `trap` command is used to specify actions to be taken when a signal is received. It allows you to define signal handlers that control how a script or shell session responds to specific signals.
+
+Example: Define a trap that executes a cleanup function when the script receives the SIGINT signal (Ctrl+C).
+```bash
+#!/bin/bash
+
+cleanup() {
+    echo "Performing cleanup..."
+    # Cleanup actions here
+}
+
+trap cleanup SIGINT
+
+# Rest of the script
+# ...
+```
