@@ -221,3 +221,69 @@ man 7 signal
 | SIGKILL | Kill signal. It is used to forcefully terminate a process. Unlike other signals, the process cannot catch or ignore SIGKILL.                                 |
 | SIGTERM | Termination signal. It is a general-purpose signal used to request the termination of a process. It allows the process to perform cleanup operations before exiting. |
 | SIGALRM | Alarm signal. It is typically used to schedule a process to receive a signal after a specified amount of time has passed.                                      |
+
+## More About Process Management
+### Types of Processes in Linux
+
+- Foreground Processes
+depend on the user for input
+also referred to as interactive processes
+
+- Background Processes
+run independently of the user
+referred to as non-interactive or automatic processes
+
+### Process States in Linux
+Tutorials
+Questions
+Learning Paths
+For Businesses
+Product Docs
+Social Impact
+
+Search Community
+TUTORIAL
+Commands for Process Management in Linux
+Published on August 3, 2022
+UNIX/Linux
+author
+Jayant Verma
+
+Commands for Process Management in Linux
+While we believe that this content benefits our community, we have not yet thoroughly reviewed it. If you have any suggestions for improvements, please let us know by clicking the “report an issue“ button at the bottom of the tutorial.
+
+In this article, we’ll discuss process management in Linux. A process in Linux is nothing but a program in execution. It’s a running instance of a program. Any command that you execute starts a process.
+
+Types of Processes in Linux
+In Linux processes can be of two types:
+
+Foreground Processes
+depend on the user for input
+also referred to as interactive processes
+
+Background Processes
+run independently of the user
+referred to as non-interactive or automatic processes
+
+Process States in Linux
+A process in Linux can go through different states after it’s created and before it’s terminated. These states are:
+
+Running
+
+Sleeping
+
+Interruptible sleep
+Uninterruptible sleep
+Stopped
+
+Zombie
+
+A process in running state means that it is running or it’s ready to run.
+
+The process is in a sleeping state when it is waiting for a resource to be available.
+
+A process in Interruptible sleep will wakeup to handle signals, whereas a process in Uninterruptible sleep will not.
+
+A process enters a stopped state when it receives a stop signal.
+
+Zombie state is when a process is dead but the entry for the process is still present in the table.
