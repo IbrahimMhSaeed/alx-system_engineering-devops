@@ -654,6 +654,8 @@ Examples:
 
    This loop reads lines from `file.txt` and processes each line by echoing a message with the line content until an empty line is encountered (`-z "$line"` condition).
 
+Certainly! Here's an expanded section on control structures in Unix, including `if`, `else`, `elif`, and `case` statements:
+
 ## `if` Statement
 
 The `if` statement is a conditional control structure in Unix that allows you to perform different actions based on certain conditions. It has the following syntax:
@@ -663,7 +665,7 @@ if CONDITION
 then
   # Commands to be executed if the condition is true
 else
-  # Commands to be executed if the condition is false (optional)
+  # Commands to be executed if the condition is false
 fi
 ```
 
@@ -675,4 +677,81 @@ Examples:
    if [ $num -gt 10 ]
    then
      echo "Number is greater than 10"
+   else
+     echo "Number is not greater than 10"
    fi
+   ```
+
+   This condition checks if the variable `num` is greater than 10. If true, it prints "Number is greater than 10"; otherwise, it prints "Number is not greater than 10".
+
+2. Check multiple conditions using `elif`:
+   ```bash
+   num=5
+   if [ $num -gt 10 ]
+   then
+     echo "Number is greater than 10"
+   elif [ $num -eq 10 ]
+   then
+     echo "Number is equal to 10"
+   else
+     echo "Number is less than 10"
+   fi
+   ```
+
+   This example checks if the variable `num` is greater than 10, equal to 10, or less than 10, and prints the corresponding message.
+
+## `case` Statement
+
+The `case` statement is another conditional control structure in Unix that allows you to perform different actions based on multiple conditions. It has the following syntax:
+
+```bash
+case VARIABLE in
+  PATTERN1)
+    # Commands to be executed if PATTERN1 matches
+    ;;
+  PATTERN2)
+    # Commands to be executed if PATTERN2 matches
+    ;;
+  *)
+    # Commands to be executed if no pattern matches
+    ;;
+esac
+```
+
+Examples:
+
+1. Check the value of a variable using a `case` statement:
+   ```bash
+   fruit="apple"
+   case $fruit in
+     "apple")
+       echo "It's an apple"
+       ;;
+     "banana")
+       echo "It's a banana"
+       ;;
+     *)
+       echo "It's neither an apple nor a banana"
+       ;;
+   esac
+   ```
+
+   This example checks the value of the variable `fruit` and prints the corresponding message based on the matching pattern.
+
+2. Use pattern matching with wildcards:
+   ```bash
+   file="document.txt"
+   case $file in
+     *.txt)
+       echo "It's a text file"
+       ;;
+     *.jpg|*.png)
+       echo "It's an image file"
+       ;;
+     *)
+       echo "It's neither a text file nor an image file"
+       ;;
+   esac
+   ```
+
+   This example uses wildcard patterns to match different file extensions and prints the corresponding message.
