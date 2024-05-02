@@ -470,3 +470,29 @@ fi
 
 # /dev/ttyS1 is a character device.
 ```
+## Make Linux/Unix Script Portable With #!/usr/bin/env As a Shebang
+
+The env command allows to run a program in a modified environment. First, find line
+```
+#!/bin/bash
+```
+Replace with
+```
+#!/usr/bin/env bash
+```
+The advantage of #!/usr/bin/env bash is that it will use whatever bash executable appears first in the running user’s $PATH variable.
+
+```
+#!/usr/bin/env bash
+x=5
+y=10
+echo "$x and $y"
+```
+Python Example
+```
+#!/usr/bin/env python
+x=10
+y=20
+z=x+y
+print z
+```
