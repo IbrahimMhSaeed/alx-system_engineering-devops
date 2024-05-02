@@ -135,3 +135,54 @@ The `kill` command supports different signals to control the termination behavio
 - The `cmdline` file within a specific PID directory contains the command name, options, and arguments used to start the process.
 - Accessing files within the `/proc` directory may require administrative privileges. The `su` command can be used to switch to the root (administrative) account to read these files.
 - The `status` file within a PID directory provides more detailed information about the process it represents. For example, the `status` file for PID 1 (/proc/1/status) contains extensive information about the `init` process.
+
+## Environment List
+
+There are two ways in which we can access a process environment:
+
+1. Through the global variable ‘extern char **extern‘
+
+2. Through the third argument to the main() function ‘char *envp[]’
+
+- ISO C specifies that the main() function to be written with only two arguments.
+
+#### example
+```c
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+
+extern char **environ;
+
+int main(int argc, char *argv[])
+{
+  int count = 0;
+
+  printf("\n");
+  while(environ[count] != NULL)
+  {
+    printf("[%s] :: ", environ[count]);
+    count++;
+  }
+
+  char *val = getenv("USER");
+  printf("\n\nCurrent value of environment variable USER is [%s]\n",val);
+
+  if(setenv("USER","Arora",1))
+  {
+    printf("\n setenv() failed\n");
+    return 1;
+  }
+
+  printf("\n Successfully Added a new value to existing environment variable USER\n");
+
+  val = getenv("USER");
+  printf("\nNew value of environment variable USER is [%s]\n",val);
+
+  while(1)
+  {
+    sleep(2);
+  }
+  return 0;
+}
+```
