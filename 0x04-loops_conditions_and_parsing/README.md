@@ -427,3 +427,46 @@ echo
 
 exit 0
 ```
+## 7.2. File test operators
+
+Returns true if...
+
+-e
+file exists
+
+-f
+file is a regular file (not a directory or device file)
+
+-s
+file is not zero size
+
+-d
+file is a directory
+
+-b
+file is a block device
+
+-c
+file is a character device
+
+*use this link to check the rest:*
+https://tldp.org/LDP/abs/html/fto.html
+```
+device0="/dev/sda2"    # /   (root directory)
+if [ -b "$device0" ]
+then
+  echo "$device0 is a block device."
+fi
+
+# /dev/sda2 is a block device.
+
+
+
+device1="/dev/ttyS1"   # PCMCIA modem card.
+if [ -c "$device1" ]
+then
+  echo "$device1 is a character device."
+fi
+
+# /dev/ttyS1 is a character device.
+```
