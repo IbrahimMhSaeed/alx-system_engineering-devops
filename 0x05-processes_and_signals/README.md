@@ -128,5 +128,10 @@ The `kill` command supports different signals to control the termination behavio
   ```bash
   kill -2 <PID>
   ```
-
-These examples provide a starting point to explore and utilize the commands in different scenarios. Remember to exercise caution when terminating processes and ensure that you have the necessary permissions to perform such actions.
+#### proc file
+- The `/proc` filesystem contains kernel data that represents information about processes in real-time.
+- The `/proc` directory contains numbered directories, with each directory corresponding to a PID (Process Identification Number) currently running on the system.
+- The `cat` command can be used to read the contents of files within the `/proc` directory.
+- The `cmdline` file within a specific PID directory contains the command name, options, and arguments used to start the process.
+- Accessing files within the `/proc` directory may require administrative privileges. The `su` command can be used to switch to the root (administrative) account to read these files.
+- The `status` file within a PID directory provides more detailed information about the process it represents. For example, the `status` file for PID 1 (/proc/1/status) contains extensive information about the `init` process.
