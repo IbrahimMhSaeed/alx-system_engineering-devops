@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 # print content of current directory
 
-for ele in *
+files=$(ls)
+for file in $files
 do
-	ele="$ele"
+	if [[ $file != .* && $file == *-* ]]
+	then
+		output=$(echo "$file" | cut -d'-' -f2)
+		echo "$output"
+	fi
 done
-output=$(cut -d'-' -f2 temp.txt)
-echo "$output"
