@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# displays lines containing the bash
+
+pgrep -lx bash

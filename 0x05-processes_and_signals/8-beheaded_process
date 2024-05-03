@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# displays lines containing the bash
+
+pkill -9 -f 7-highlander
