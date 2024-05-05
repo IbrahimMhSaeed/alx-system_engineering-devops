@@ -108,7 +108,7 @@ n$ |Matches any string with n at the end of it
 ?=n |Matches any string that is followed by a specific string n
 ?!n |Matches any string that is not followed by a specific string n
 ?<=n |Matches any string that is priored by a specific string n
-?<=n |Matches any string that is not priored by a specific string n
+?<!n |Matches any string that is not priored by a specific string n
 
 #### Pattern test
 ```javascript
