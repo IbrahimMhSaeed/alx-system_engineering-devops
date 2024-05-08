@@ -23,3 +23,12 @@ communications between systems are split into seven different abstraction layers
 | Network      | Routing, addressing, and logical network structure (e.g., IP, routing protocols)                            |
 | Data Link    | Reliable transmission of data frames between adjacent network nodes (e.g., Ethernet)                        |
 | Physical     | Physical transmission of raw data over the network medium (e.g., cables, signals)                           |
+
+![Screenshot_2024-05-08-08-08-30-05_f9ee0578fe1cc94de7482bd41accb329](https://github.com/IbrahimMhSaeed/alx-system_engineering-devops/assets/96060166/b1c891de-2a9d-45fc-a54e-f497e6f31719)
+![Screenshot_2024-05-08-08-11-53-41_f9ee0578fe1cc94de7482bd41accb329](https://github.com/IbrahimMhSaeed/alx-system_engineering-devops/assets/96060166/72dc4dcc-0b32-4067-8cee-b77b822c22c6)
+![Screenshot_2024-05-08-08-12-41-54_f9ee0578fe1cc94de7482bd41accb329](https://github.com/IbrahimMhSaeed/alx-system_engineering-devops/assets/96060166/5f97f875-fc55-4ccd-93c7-cbe2a0558cd6)
+![Screenshot_2024-05-08-08-13-22-54_f9ee0578fe1cc94de7482bd41accb329](https://github.com/IbrahimMhSaeed/alx-system_engineering-devops/assets/96060166/d64220a1-2080-4a6b-8eea-92588834949f)
+![Screenshot_2024-05-08-08-14-14-98_f9ee0578fe1cc94de7482bd41accb329](https://github.com/IbrahimMhSaeed/alx-system_engineering-devops/assets/96060166/3a7cd0a3-14e6-49ee-93b2-209c4827ae0f)
+![Screenshot_2024-05-08-08-15-33-05_f9ee0578fe1cc94de7482bd41accb329](https://github.com/IbrahimMhSaeed/alx-system_engineering-devops/assets/96060166/2ee1bf36-36db-4226-ba6c-1a32bd3e9659)
+![Screenshot_2024-05-08-08-47-27-99_f9ee0578fe1cc94de7482bd41accb329](https://github.com/IbrahimMhSaeed/alx-system_engineering-devops/assets/96060166/d5e77526-9dd6-44c1-bc5a-32f98d468355)
+
