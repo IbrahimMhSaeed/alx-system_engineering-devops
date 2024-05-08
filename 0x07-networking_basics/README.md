@@ -32,3 +32,30 @@ communications between systems are split into seven different abstraction layers
 ![Screenshot_2024-05-08-08-15-33-05_f9ee0578fe1cc94de7482bd41accb329](https://github.com/IbrahimMhSaeed/alx-system_engineering-devops/assets/96060166/2ee1bf36-36db-4226-ba6c-1a32bd3e9659)
 ![Screenshot_2024-05-08-08-47-27-99_f9ee0578fe1cc94de7482bd41accb329](https://github.com/IbrahimMhSaeed/alx-system_engineering-devops/assets/96060166/d5e77526-9dd6-44c1-bc5a-32f98d468355)
 
+## Types of Area Networks
+
+Common types of area networks are:
+**LAN**: Local Area Network
+**WAN**: Wide Area Network
+**WLAN**: Wireless Local Area Network
+
+### LAN: Local Area Network
+![Ethernet_LAN svg](https://github.com/IbrahimMhSaeed/alx-system_engineering-devops/assets/96060166/a9f7b538-0c6c-4710-8903-57e65fa4aac3)
+
+- LAN connects network devices over a relatively short distance.
+- A networked office building, school, or home usually contains a single LAN
+- In TCP/IP networking, a LAN is often, but not always, implemented as a single IP subnet.
+- LANs are also typically owned, controlled, and managed by a single person or organization.
+- Ethernet and Wi-Fi are the two most common technologies in use for local area networks.
+
+### WAN: Wide Area Network
+![440px-LAN_WAN_scheme svg](https://github.com/IbrahimMhSaeed/alx-system_engineering-devops/assets/96060166/641ec7de-164d-4fda-9b66-24e3948289a2)
+
+- A WAN spans a large physical distance.
+- The internet is the largest WAN, spanning the Earth.
+- A WAN is a geographically-dispersed collection of LANs.
+- A network device called a router connects LANs to a WAN.
+- In IP networking, the router maintains both a LAN address and a WAN address.
+- A WAN differs from a LAN most WANs (like the internet) aren't owned by a single organization. Instead, WANs exist under collective or distributed ownership and management.
+
+
