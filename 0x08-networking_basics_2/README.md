@@ -229,3 +229,59 @@ Now, both the server and client are configured to use UDP protocol. This can be 
 ```bash
 $ netstat | grep 2389 udp 0 0 localhost:42634 localhost:2389 ESTABLISHED
 ```
+
+### ifconfig
+
+The `ifconfig` command is used to display or configure network interfaces on a Unix-like operating system. It provides information about the network interfaces, such as IP addresses, MAC addresses, and network configuration.
+
+Example:
+```
+$ ifconfig
+```
+
+Output:
+```
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.101  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::a00:27ff:fe8e:ceae  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:8e:ce:ae  txqueuelen 1000  (Ethernet)
+        RX packets 148  bytes 15546 (15.1 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 82  bytes 12472 (12.1 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+```
+
+### telnet
+
+The `telnet` command is used to establish a remote terminal connection to a specified host using the Telnet protocol. It allows you to interact with remote systems, typically for administration or troubleshooting purposes.
+
+Example:
+```
+$ telnet example.com 80
+```
+
+Output:
+```
+Trying 93.184.216.34...
+Connected to example.com.
+Escape character is '^]'.
+```
+
+### nc
+
+The `nc` (netcat) command is a versatile networking utility that can be used for various purposes, such as establishing network connections, port scanning, and transferring data. It can act as a client or a server, depending on the usage.
+
+Example:
+```
+$ nc example.com 80
+```
+
+Output:
+```
+GET / HTTP/1.1
+Host: example.com
+
+HTTP/1.1 200 OK
+Server: nginx
+...
+```
