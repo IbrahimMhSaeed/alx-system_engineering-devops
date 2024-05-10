@@ -26,3 +26,4 @@ Before DNS came online, this file held all the hostnames and IP addresses for th
 ```bash
 sudo nano /etc/hosts
 ```
+![hosts_file_example (1)](https://github.com/IbrahimMhSaeed/alx-system_engineering-devops/assets/96060166/2f1a444c-7d51-4671-8b62-48fa3d71ec2e)
