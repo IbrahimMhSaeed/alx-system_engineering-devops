@@ -275,3 +275,8 @@ $ ./test.sh
 $ echo $_
 ./test.sh     ### Gives file name for shell scripts
 ```
+While the full list of ports should not be memorized, it is important to know the most used ports, let’s start by remembering 3 of them:
+
+22 for SSH
+80 for HTTP
+443 for HTTPS
