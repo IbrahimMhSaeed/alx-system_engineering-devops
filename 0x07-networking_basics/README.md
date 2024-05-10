@@ -143,6 +143,8 @@ Localhost is often used in development and testing environments, allowing develo
 It's important to note that "localhost" is specific to your own device and cannot be used to access services or resources on other devices within a network.
 
 ## What's the Difference Between TCP and UDP?
+![3d92e3c4a470f8ecf4c73db511fcbbadaa002e1c](https://github.com/IbrahimMhSaeed/alx-system_engineering-devops/assets/96060166/5d5f075f-ace2-4bc5-a0be-cd8d4e172e34)
+
 - TCP/IP is a suite of protocols used by devices to communicate over the Internet and most local networks.
 - Transmission Control Protocol (TCP) and the Internet Protocol (IP).
 - TCP provides apps a way to deliver (and receive) an ordered and error-checked stream of information packets over the network.
