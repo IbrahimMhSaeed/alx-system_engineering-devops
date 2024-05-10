@@ -3,7 +3,12 @@
 ## Open Systems Interconnection (OSI) model
 is a reference model from the International Organization for Standardization (ISO) that "provides a common basis for the coordination of standards development for the purpose of systems interconnection".
 
+![4e6a0ad87a65d7054248](https://github.com/IbrahimMhSaeed/alx-system_engineering-devops/assets/96060166/7cd55436-70e0-4ae8-bf76-c777357d554e)
+
+
 Once you undertand the model you can recognize which devices are compatible with each other
+
+![0fc96bd99faa7941b18bcae4c5f90c6acd11791d](https://github.com/IbrahimMhSaeed/alx-system_engineering-devops/assets/96060166/6b8c87b3-a3ac-45d0-bdc2-2f3b102a6fe3)
 
 communications between systems are split into seven different abstraction layers:
 1. Physical
