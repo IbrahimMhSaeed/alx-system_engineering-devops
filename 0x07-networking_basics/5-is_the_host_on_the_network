@@ -6,5 +6,6 @@ then
 	for i in {1..5}
 	do
 		ping "$1"
+		i=$i
 	done
 fi
