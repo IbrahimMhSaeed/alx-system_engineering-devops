@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 # ping ip 5 times
 
-if [[ $# -gt 1 ]]
+if [[ $# -gt 0 ]]
 then
 	for i in {1..5}
 	do
 		ping "$1"
 		i=$i
 	done
+else
+	echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
 fi
